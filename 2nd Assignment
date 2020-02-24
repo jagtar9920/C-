@@ -15,3 +15,24 @@ int i, n, n1 = 0, n2 = 1, nxtNo;
                 n1 = n2;
                 n2 = nxtNo;
             }
+
+abc
+
+ char alphabts;
+            for (alphabts ='a'; alphabts<='z'; alphabts++)
+            {
+                Console.WriteLine(" " +alphabts);
+            }
+            
+ 
+stars 
+int i, j;
+
+            for(i=0; i<=4; i++)
+            {
+                for(j=0; j<=i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
