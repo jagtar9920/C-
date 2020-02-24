@@ -1,0 +1,17 @@
+fibonacca series
+int i, n, n1 = 0, n2 = 1, nxtNo;
+
+            Console.WriteLine("Enter the number of terms you want to display: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Fibonacci series:");
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+
+            for (i = 0; i <= n; i++)
+            {
+                nxtNo = n1 + n2;
+                Console.WriteLine(nxtNo);
+                n1 = n2;
+                n2 = nxtNo;
+            }
