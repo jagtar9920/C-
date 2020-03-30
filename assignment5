@@ -79,45 +79,43 @@
         }
 
       //CharactersDigitSpaceAlpha
-      int  alpha, space, num, i;
-            alpha = 0; space = 0; num = 0; i = 0;
-            Console.WriteLine("Enter the String");
-            String str = Console.ReadLine();
-            int l = str.Length;
-
-            //Characters of string
-            Console.WriteLine("Number of characters in string: " + l);
-
-            //alphanbets in string
-            while (i < l)
-            {
-                if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
-                {
-                    alpha++;
-                }
-                i++;
-            }
-            Console.WriteLine("Numbers of alphabets:" + alpha);
+      
+    string str;
+			int alp, digit, splch, space, i, l;
+			alp = digit = splch = space = i = 0;
 
 
-            //spaces in string
-            for (int ii=0;  ii< l; ii++)
-            {
-                String str1 = str.Substring(ii, 1);
-                if (str1 == " ")
-                {
-                    space++;
-                }
-               
-            }
-          Console.WriteLine("Number of spaces: " + space);
+			Console.Write("\n\nCount total number of alphabets, digits and special characters :\n");
+			Console.Write("--------------------------------------------------------------------\n");
+			Console.Write("Input the string : ");
+			str = Console.ReadLine();
+			l = str.Length;
 
-            //digits in string
-           for(int j =0; j < l; j++)
-            {
-                if (str[j] >= '0' && str[j] <= '9')
-                {
-                    num++;
-                }
-            }
-            Console.WriteLine("Number of numbers(digits): " + num);
+			
+
+			while (i < l)
+			{
+				if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+				{
+					alp++;
+				}
+				else if (str[i] >= '0' && str[i] <= '9')
+				{
+					digit++;
+				}
+				else if(str[i] >= ' ' && str[i] <= ' ')
+				{
+					space++;
+				}
+				else
+				{
+					splch++;
+				}
+
+				i++;
+			}
+
+			Console.Write("Number of Alphabets in the string is : {0}\n", alp);
+			Console.Write("Number of Digits in the string is : {0}\n", digit);
+			Console.Write("Number of Special characters in the string is : {0}\n", splch);
+			Console.Write("Number of Spaces in the string is : {0}\n", space);
