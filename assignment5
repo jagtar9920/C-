@@ -38,3 +38,44 @@
              }
 
             Console.WriteLine("Reverse order of string is: " + rString);
+            
+            
+ //Words Characters
+  count obj = new count();   
+            obj.ch();
+            Console.ReadKey();
+        }
+    }
+
+    public class count
+    {
+        public void ch()
+        {
+            Console.WriteLine("Enter the String");
+            String str = Console.ReadLine();
+            int len = str.Length;
+            Console.WriteLine("Number of characters in string: " + len);
+
+            words(ref str);
+
+        }
+        public void words( ref String str)
+        {
+
+            
+            int word =1;
+           
+            int l = 0;
+            while (l<= str.Length- 1)
+            {
+                if (str[l] == ' ' || str[l] == '\n' || str[l] == '\t')
+                {
+                    word++;
+                }
+                l++;
+            }
+
+            Console.WriteLine("Number of words : {0}", word);
+        }
+
+      
