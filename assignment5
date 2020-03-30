@@ -78,4 +78,46 @@
             Console.WriteLine("Number of words : {0}", word);
         }
 
-      
+      //CharactersDigitSpaceAlpha
+      int  alpha, space, num, i;
+            alpha = 0; space = 0; num = 0; i = 0;
+            Console.WriteLine("Enter the String");
+            String str = Console.ReadLine();
+            int l = str.Length;
+
+            //Characters of string
+            Console.WriteLine("Number of characters in string: " + l);
+
+            //alphanbets in string
+            while (i < l)
+            {
+                if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+                {
+                    alpha++;
+                }
+                i++;
+            }
+            Console.WriteLine("Numbers of alphabets:" + alpha);
+
+
+            //spaces in string
+            for (int ii=0;  ii< l; ii++)
+            {
+                String str1 = str.Substring(ii, 1);
+                if (str1 == " ")
+                {
+                    space++;
+                }
+               
+            }
+          Console.WriteLine("Number of spaces: " + space);
+
+            //digits in string
+           for(int j =0; j < l; j++)
+            {
+                if (str[j] >= '0' && str[j] <= '9')
+                {
+                    num++;
+                }
+            }
+            Console.WriteLine("Number of numbers(digits): " + num);
