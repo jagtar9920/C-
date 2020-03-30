@@ -1,0 +1,40 @@
+ //emailPassword
+ 
+        string email, password;
+
+            Console.WriteLine("Enter email: ");
+            email = Console.ReadLine();
+            if (email.Equals("jagtar9920@gmail.com"))
+            {
+                Console.WriteLine("Enter Password: ");
+                password = Console.ReadLine();
+                if (password.Equals("Js85"))
+                    Console.WriteLine("You have logged in successfully");
+                else
+                    Console.WriteLine("User Id Blocked");
+            }
+            else
+                Console.WriteLine("Wrong UserName");
+
+//lowerCase
+            String str;
+            Console.WriteLine("Enter string in upper case");
+            str = Console.ReadLine();
+
+            Console.WriteLine("String in lower Case: " + str.ToLower());
+            
+ 
+//reverseString
+             string inputString, rString = "";
+             int i, j;
+
+             Console.Write("Enter string: ");
+            inputString = Console.ReadLine();
+
+             j = inputString.Length - 1;
+             for (i = j; i >= 0; i--)
+             {
+                 rString = rString + inputString[i];
+             }
+
+            Console.WriteLine("Reverse order of string is: " + rString);
