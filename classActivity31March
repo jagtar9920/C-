@@ -1,50 +1,72 @@
-//button
+//button  
+
+     private void button1_Click(object sender, EventArgs e)
+        {
 
             int length = Convert.ToInt32(output.Text);
+            int width = Convert.ToInt32(output1.Text);
+            int heigth = Convert.ToInt32(output2.Text);
             square mysquare = new square();
             mysquare.setLength(length);
-            MessageBox.Show("Area of square is " + mysquare.getLength() + " is " + mysquare.calculateSquareArea());
+            mysquare.setWidth(width);
+            mysquare.setHeigth(heigth);
+
+
+            MessageBox.Show("Volume of rectangle is " + mysquare.calculatearea());
+        }
             
 //square
     class square : rectangle
     {
-        public int calculateSquareArea()
+        public int calculatearea()
         {
-            return (newLength * newLength);
+            return (newLength * newWidth * newHeigth);
         }
     }
     
-//rect
-   public rectangle()
+//rectpublic rectangle()
         {
             newLength = 0;
             newWidth = 0;
+            newHeigth = 0;
         }
-        public rectangle(int length,int width)
+        public rectangle(int length,int width, int heigth)
         {
             newLength = length;
             newWidth = width;
+            newHeigth = heigth;
         }
         public int getLength()
         {
             return newLength;
         }
-        private int getWidth()
+        public int getWidth()
         {
             return newWidth;
+        }
+
+        public int getHeight()
+        {
+            return newHeigth;
         }
         public void setLength(int length)
         {
             newLength = length;
         }
-        private void setWidth(int width)
+        public void setWidth(int width)
         {
             newWidth = width;
         }
-        private int calculatearea()
+
+        public void setHeigth(int heigth)
         {
-            return (newLength * newWidth);
+            newHeigth = heigth;
+        }
+        public int calculatearea()
+        {
+            return (newLength * newWidth * newHeigth);
         }
         public int newLength;
-        private int newWidth;
+        public int newWidth;
+        public int newHeigth;
 
