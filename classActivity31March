@@ -6,11 +6,11 @@
             MessageBox.Show("Area of square is " + mysquare.getLength() + " is " + mysquare.calculateSquareArea());
             
 //square
-      class square : rectangle
+    class square : rectangle
     {
         public int calculateSquareArea()
         {
-            return (newlength * newlength);
+            return (newLength * newLength);
         }
     }
     
