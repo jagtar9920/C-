@@ -1,0 +1,52 @@
+//button
+
+            int length = Convert.ToInt32(output.Text);
+            square mysquare = new square();
+            mysquare.setLength(length);
+            MessageBox.Show("Area of square is " + mysquare.getLength() + " is " + mysquare.calculateSquareArea());
+            
+//square
+      class square : rectangle
+    {
+        public int calculateSquareArea()
+        {
+            return (newlength * newlength);
+        }
+    }
+    
+//rect
+  class rectangle
+
+    {
+        public rectangle()
+        {
+            newWidth = 0;
+            newLength = 0;
+        }
+        public rectangle (int length, int width)
+        {
+            newWidth = width;
+            newLength = length;
+        }
+
+        public int getLength()
+        {
+            return newLength;
+        }
+
+        public void setLength(int length)
+        {
+           newLength = length;
+        }
+
+        public int getWIdth()
+        {
+            return newWidth;
+        }
+
+        public void setWidth(int length)
+        {
+            newWidth = length;
+        }
+
+    }
