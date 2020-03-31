@@ -15,38 +15,36 @@
     }
     
 //rect
-  class rectangle
-
-    {
-        public rectangle()
+   public rectangle()
         {
-            newWidth = 0;
             newLength = 0;
+            newWidth = 0;
         }
-        public rectangle (int length, int width)
+        public rectangle(int length,int width)
         {
-            newWidth = width;
             newLength = length;
+            newWidth = width;
         }
-
         public int getLength()
         {
             return newLength;
         }
-
-        public void setLength(int length)
-        {
-           newLength = length;
-        }
-
-        public int getWIdth()
+        private int getWidth()
         {
             return newWidth;
         }
-
-        public void setWidth(int length)
+        public void setLength(int length)
         {
-            newWidth = length;
+            newLength = length;
         }
+        private void setWidth(int width)
+        {
+            newWidth = width;
+        }
+        private int calculatearea()
+        {
+            return (newLength * newWidth);
+        }
+        public int newLength;
+        private int newWidth;
 
-    }
