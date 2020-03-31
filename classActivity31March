@@ -20,7 +20,7 @@
     {
         public int calculatearea()
         {
-            return (newLength * newWidth * newHeigth);
+            return (newLength * newWidth * newHeigth );
         }
     }
     
