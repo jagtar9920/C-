@@ -1,0 +1,119 @@
+1. //Max Min
+ int[] arr1 = new int[10] { 1,2,3,4,5,6,7,8,9,10};
+           
+            int i, max ,min;
+
+            max = arr1[0];
+            min = arr1[0];
+
+            for (i = 1; i < arr1.Length; i++)
+            {
+                if (arr1[i] > max)
+                {
+                    max = arr1[i];
+                }
+
+                if (arr1[i] < min)
+                {
+                    min = arr1[i];
+                }
+            }
+            Console.WriteLine("Maximum element is : "+ max);
+            Console.WriteLine("Minimum element is : "+ min);
+
+2.//sort and insert
+int[] a1 = new int[10] { 1,5,6,3,7,4,8,2,10,9};
+            int i, j, t;
+
+            for (i = 0; i < a1.Length; i++){           
+                for (j = i + 1; j < a1.Length; j++){               
+                    if (a1[j] < a1[i])
+                    {
+                        t = a1[i];
+                        a1[i] = a1[j];
+                        a1[j] = t;
+                    }
+               } }
+            
+            Console.WriteLine("ascending order:");
+            for (i = 0; i < a1.Length; i++){        
+                Console.Write("{0} ", a1[i]);
+            }
+
+            Console.WriteLine("\n Adding an element to existing array");
+
+            Array.Resize(ref a1, a1.Length + 1);
+            a1[a1.Length - 1] = 11;
+
+            for (i = 0; i < a1.Length; i++)
+            {
+                Console.Write("{0} ", a1[i]);
+            }
+    
+  3.///Sort and delete
+              int[] a1 = new int[10] { 1, 5, 6, 3, 7, 4, 8, 2, 10, 9 };
+            int i, j, t;
+
+            for (i = 0; i < a1.Length; i++)
+            {
+                for (j = i + 1; j < a1.Length; j++)
+                {
+                    if (a1[j] < a1[i])
+                    {
+                        t = a1[i];
+                        a1[i] = a1[j];
+                        a1[j] = t;
+                    }
+                }
+            }
+
+            Console.WriteLine("ascending order:");
+            for (i = 0; i < a1.Length; i++)
+            {
+                Console.Write("{0} ", a1[i]);
+            }
+
+            Console.WriteLine("\n Deleting an element from existing array");
+            for (int a = 5; a < a1.Length -1; a++) // 5 is index which you want to delete
+            {
+                a1[a] = a1[a + 1];
+            }
+
+            // Decrease size of array
+            Array.Resize(ref a1, a1.Length - 1);
+            for (i = 0; i < a1.Length; i++)
+            {
+            Console.Write("{0} ", a1[i]);
+            }
+
+4.//Find first and second largest number
+ 
+        int[] a1 = new int[12] { 2, 5, 6, 9, 7, 1, 3, 10, 8, 4, 11, 12 };
+            int i, j, t;
+
+            for (i = 0; i < a1.Length; i++)
+            {
+                for (j = i + 1; j < a1.Length; j++)
+                {
+                    if (a1[j] < a1[i])
+                    {
+                        t = a1[i];
+                        a1[i] = a1[j];
+                        a1[j] = t;
+                    }
+                }
+            }
+
+            Console.Write("Array is:");
+            for (i = 0; i < a1.Length; i++)
+            {
+
+                Console.Write(" "+a1[i]);
+
+            }
+
+           int largeNum1 = a1[a1.Length - 1];
+          int  largeNum2 = a1[a1.Length - 2];
+
+            Console.WriteLine("\n The first largest number = " + largeNum1);
+            Console.WriteLine("The second largest number = " + largeNum2);
