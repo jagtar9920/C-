@@ -1,0 +1,196 @@
+   int num1 = 0;
+            int num2 = 1;
+            int nextNum;
+            Console.WriteLine("Enter how long you want you to print fibonacci series: ");
+           int  numEntered = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num1);
+            Console.WriteLine(num2);
+             
+            for (int i =0; i<=numEntered; i++)
+            {
+                nextNum = num1 + num2;
+                Console.WriteLine(nextNum);
+                num1 = num2;
+                num2 = nextNum;
+            }
+            
+                     fibMethod obj = new fibMethod();
+            obj.fib();
+            Console.ReadKey();
+
+
+        }
+
+        class fibMethod
+        {
+            public void fib()
+            {
+                Console.WriteLine("Enter how long you want you to print fibonacci series: ");
+                int numEntered = Convert.ToInt32(Console.ReadLine());
+               output(ref numEntered);
+            }
+            public void output (ref int numEntered)
+            {
+                int num1 = 0;
+                int num2 = 1;
+                int nextNum;
+
+                Console.WriteLine(num1);
+                Console.WriteLine(num2);
+
+                for (int i = 0; i <= numEntered; i++)
+                {
+                    nextNum = num1 + num2;
+                    Console.WriteLine(nextNum);
+                    num1 = num2;
+                    num2 = nextNum;
+                }
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        using System;
+
+namespace FibSeries
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            alp obj = new alp();
+            obj.input();
+            Console.ReadKey();
+           
+
+        }
+
+        class alp
+        {
+            public void input()
+            {
+                Console.WriteLine("Enter alphabet from where you want to print abc");
+                char abcStart = Convert.ToChar(Console.ReadLine());
+
+                Console.WriteLine("Enter alphabet at where you want to end abc");
+                char abcEnd = Convert.ToChar(Console.ReadLine());
+                output(ref abcStart, abcEnd);
+            }
+
+            public void output(ref char abcStart, char abcEnd)
+            {
+
+                for (char i = abcStart; i<=abcEnd; i++)
+                {
+
+                    Console.Write(" " + i);
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+using System;
+
+namespace FibSeries
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int m = 1; m <= 5; m++)
+            {
+                for (int n = 1; n <= m; n++)
+                {
+                    Console.Write("*");
+                }
+
+
+                Console.WriteLine();
+            }
+
+        }
+
+        }
+}
+
+
+
+
+using System;
+
+namespace FibSeries
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            pattern obj = new pattern();
+            obj.input();
+            Console.ReadKey();
+        }
+             class pattern
+        {
+            public void input()
+            {
+                Console.WriteLine("Enter the number of stars you want to print in first line");
+                int str = Convert.ToInt32(Console.ReadLine());
+                output(ref str);
+            }
+            public void output(ref int str)
+            {
+                for (int m = str; m >= 1; m--)
+                {
+                    for (int n = 1; n <= m; n++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+using System;
+
+namespace FibSeries
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine("Enter alphabet from where you want to print abc");
+            char abcStart = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Enter alphabet at where you want to end abc");
+            char abcEnd = Convert.ToChar(Console.ReadLine());
+
+
+            for (char i = abcStart; i <= abcEnd; i++)
+            {
+
+                Console.Write(" " + i);
+            }
+
+        }
+        
+    }
+}
